@@ -10,7 +10,7 @@ class User:
 
     #def log_in(self, user_id, user_password):
     #    if all.get(f"{user_id}"):
-
+###
 
 
 # def requires_authentication(func):
