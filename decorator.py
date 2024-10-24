@@ -45,9 +45,12 @@ def view_profile():
     if User.all.get(profile) is None:
         print("Profile not found")
     else:
-        print(f"User {profile} has the password {User.all[profile]}.)
+        print(f"User {profile} has the password {User.all[profile]}")
 
-def browse_public_feed():
+def browse_public_feed(user):
+    if user.logged_in is False:
+        print("You are not currently login in, but you can still browse the feed.")
+
     print("Why look at other when you are the best? ")
 
 # def requires_authentication(func):
@@ -57,15 +60,15 @@ user2 = User('mark', 'cisco123!')
 user3 = User('radu', 'danu')
 
 user1.log_in()
-
-post_message(user3)
-view_profile(user1)
-
 #user1.log_out()
 
+post_message(user1)
+#post_message(user2)
 
-#print(user1.logged_in)
-#print(f"User 1 logged in: {user1.logged_in}")
-#print(f"User 2 logged in: {user2.logged_in}")
-#print(f"User 3 logged in: {user3.logged_in}")
-#print(User.all)
+view_profile(user1)
+#view_profile(user2)
+
+#browse_public_feed(user1)
+browse_public_feed(user2)
+
+
