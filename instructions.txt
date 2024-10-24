@@ -1,0 +1,18 @@
+Quest: User Authentication System
+You need to create a Python program that simulates an API with multiple functions, but certain functions
+can only be accessed if the user is authenticated. You will use decorators to enforce authentication.
+
+Requirements:
+
+1. Create a decorator called requires_authentication that will:
+- Check if a user is logged in.
+- If the user is authenticated, allow access to the function.
+- If the user is not authenticated, print a message denying access.
+
+2. Simulate a simple login/logout mechanism.
+- Use a variable like is_authenticated to track whether a user is logged in or not.
+
+3. Write several functions, some of which require the user to be authenticated to access, such as:
+- view_profile(): View the user's profile (requires authentication).
+- post_message(message): Post a message (requires authentication).
+- browse_public_feed(): Browse the public feed (does not require authentication).
