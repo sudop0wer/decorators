@@ -52,7 +52,7 @@ def browse_public_feed(user):
     if not user.logged_in:
         print("You are not currently login in, but you can still browse the feed.")
 
-    print("Why look at other when you are the best? ")
+    print("Why look at others when you are the best? ")
 
 # Test Users
 user1 = User('alex', 'password123')
@@ -63,10 +63,10 @@ user1.log_in()
 #user1.log_out()
 
 post_message(user1)
-#post_message(user2)
+post_message(user2)
 
 view_profile(user1)
-#view_profile(user2)
+view_profile(user2)
 
 #browse_public_feed(user1)
 browse_public_feed(user2)
