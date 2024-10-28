@@ -1,7 +1,30 @@
-# decorators.py
+# Decorators Login System
+A Python script for managing a simple user authentication system using classes and decorators.
 
-A Python script that manages a login system with classes and decorators.
+## Overview
 
-## Functionality
+The decorators script is a Python implementation of a login management system, using classes and decorators to enforce user authentication on specific functions. Here’s a breakdown of its main components:
+1. User Class: This class defines user-related functionality, such as login and logout. It handles user authentication by storing the login state and provides methods to log in and out.
+2. Decorator (@requires_authentication): This decorator is applied to specific functions to restrict access only to logged-in users. When a decorated function is called, the decorator checks if the user is logged in; if not, it returns an error or prompts login, enforcing security.
+3. Public and Restricted Functions: The script defines functions to demonstrate the decorator's functionality:
+  - Public Functions: Accessible by anyone, regardless of authentication status.
+  - Restricted Functions: Decorated with @requires_authentication, these functions require a user to be logged in. Examples include posting messages or viewing profiles.
 
-This Python script implements a simple user authentication system using classes and decorators. It allows users to log in, log out, and perform specific actions like posting messages or viewing profiles, but only if they are authenticated. The script defines a `User` class to manage user credentials and authentication status, while the `requires_authentication` decorator ensures that sensitive functions can only be executed by logged-in users. There is also a public feed browsing function that can be accessed without login. The script includes some predefined users and demonstrates how to authenticate and use the system.
+### Example Workflow
+- A user logs in using the User class’s login method.
+- They can access restricted functions while logged in.
+- On logout, access to restricted functions is blocked until they log in again.
+
+This design pattern demonstrates effective use of decorators for authentication, providing a simple yet flexible login management example.
+
+## Installation
+1. Clone the repository.
+2. Run decorator.py using Python 3.
+
+## Usage
+- Add user credentials in the script.
+- Use login and logout functions to authenticate.
+- Access restricted functions with authentication.
+
+## Contributions
+Contributions are welcome. Please fork the repository and submit a pull request with improvements.
